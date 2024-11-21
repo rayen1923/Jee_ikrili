@@ -20,11 +20,11 @@
                 if (!Resarvation.getRead()) {
                 %>
                     <p>
-                        From: <%= Resarvation.getStudent_id() %><br>
+                        From: <a href="Chat?receiverId=<%= Resarvation.getStudent_id() %>">${sender}</a><br>
                         Date: <%= Resarvation.getResarvation_date() %><br>
                         This house is reserved for: <%= Resarvation.getType() %><br>
                         Status: <%= Resarvation.getStatus() %><br>
-                        For house: <%= Resarvation.getHouse_id() %><br>
+                        For house : ${adress}<br>
                     </p>
                     <form action="ResarvationAction" method="post" style="display:inline;">
 					    <input type="hidden" name="action" value="reject">

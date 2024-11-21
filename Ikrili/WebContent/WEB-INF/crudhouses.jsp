@@ -93,7 +93,7 @@
                             <ul>
                                 <% for (Entities.User student : house.getStudents()) { %>
                                     <li>
-                                        <%= student.getName() %>
+                                        <a href="Chat?receiverId=<%= student.getUser_id() %>"><%= student.getName() %></a>
                                         <form action="KickStudent" method="post" style="display:inline;">
                                             <input type="hidden" name="houseId" value="<%= house.getHouse_id() %>">
                                             <input type="hidden" name="studentId" value="<%= student.getUser_id() %>">

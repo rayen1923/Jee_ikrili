@@ -20,12 +20,7 @@ public class SignIn extends HttpServlet {
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		HttpSession session = request.getSession();
-		if (session == null || session.getAttribute("userId") == null) {
-		    response.sendRedirect(request.getContextPath() + "/SignIn");
-            return;
-        }response.getWriter().append("Served at: ").append(request.getContextPath());
+		response.getWriter().append("Served at: ").append(request.getContextPath());
 		this.getServletContext().getRequestDispatcher("/WEB-INF/signin.jsp").forward(request, response);
 	}
 
